@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { Child2 } from "./Child2";
 
 function Child1(props) {
@@ -7,7 +8,11 @@ function Child1(props) {
       {props.a}
 
       <p>This is child 1 paragraph</p>
-      <Child2 b={b} hello={153} obj={{name:'sanup',age:22,job:'SDE'}}/>
+      <Child2
+        b={b}
+        hello={153}
+        obj={{ name: "Sanup", org: "Infosys", job: "SDE" }}
+      />
     </>
   );
 }
