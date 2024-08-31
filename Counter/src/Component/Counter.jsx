@@ -6,24 +6,24 @@ export function Counter() {
     setCount(count + 1);
   };
   let sub = () => {
-    count>0 && setCount(count - 1);
+    count > 0 && setCount(count - 1);
   };
   return (
     <>
-      {count}
+      <span style={{ color: "red" }}>{count}</span>
       <br />
       <br />
-      {count}{" "}
+      <span style={{ color: "green" }}>{count}</span>{" "}
       <button id="b1" onClick={add}>
         +
       </button>{" "}
       <button id="b2" onClick={sub}>
         -
       </button>{" "}
-      {count}
+      <span style={{ color: "blue" }}>{count}</span>
       <br />
       <br />
-      {count}
+      <span style={{ color: "turquoise" }}>{count}</span>
     </>
   );
 }
