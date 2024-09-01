@@ -23,7 +23,7 @@ export function Counter() {
       <span style={{ color: "blue" }}>{count}</span>
       <br />
       <br />
-      <span style={{ color: "turquoise" }}>{count}</span>
+      <span style={{ color: "" }}>{count}</span>
     </>
   );
 }
