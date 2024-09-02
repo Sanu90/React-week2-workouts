@@ -2,7 +2,13 @@ import React from "react";
 
 class Class1 extends React.Component {
   render() {
-    return <p>This comes from class Component.</p>;
+    return (
+      <>
+        <p>
+          This comes from <code>Class</code> Component.
+        </p>
+      </>
+    );
   }
 }
 
