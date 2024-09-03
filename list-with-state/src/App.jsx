@@ -7,12 +7,12 @@ function App() {
   let array = ["one", "two", "three", "four"];
   return (
     <>
-      <label>Array elements</label>
+      <label>Array elements in drop down</label>
+      <h2>Change the state according to drop down</h2>
       <br></br>
       <select name="elements" onChange={(e) => setVal(e.target.value)}>
         {array.map((val, index) => {
           console.log("value", val);
-
           return (
             <option key={index} value={val}>
               {val}
