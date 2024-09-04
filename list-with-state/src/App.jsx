@@ -1,10 +1,11 @@
 import "./App.css";
 import { useState } from "react";
+import { Test } from "./Components/Test";
 
 function App() {
   const array = ["Choose One", "Kerala", "Telangana", "Goa", "Assam"];
 
-  let [val, setValue] = useState('');
+  let [val, setValue] = useState("");
   console.log("val is:", val);
 
   return (
@@ -22,6 +23,10 @@ function App() {
       <h3>
         Drop down value is:<span style={{ color: "red" }}> {val}</span>
       </h3>
+      <h2 style={{ color: "grey"}}>
+        The below input box is for an useRef
+      </h2>
+      <Test />
     </>
   );
 }
