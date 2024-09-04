@@ -1,27 +1,27 @@
-import { useState } from "react";
 import "./App.css";
+import { useState } from "react";
 
 function App() {
-  let [val, setVal] = useState("one");
+  const array = ["Choose One", "Kerala", "Telangana", "Goa", "Assam"];
 
-  let array = ["one", "two", "three", "four"];
+  let [val, setValue] = useState('');
+  console.log("val is:", val);
+
   return (
     <>
-      <label>Array elements in drop down</label>
-      <h2>Change the state according to drop down</h2>
-      <br></br>
-      <select name="elements" onChange={(e) => setVal(e.target.value)}>
-        {array.map((val, index) => {
-          console.log("value", val);
+      <h2>Change the state value according to drop down</h2>
+      <select name="" id="" onChange={(e) => setValue(e.target.value)}>
+        {array.map((val) => {
           return (
-            <option key={index} value={val}>
+            <option value={val} key={val}>
               {val}
             </option>
           );
         })}
       </select>
-
-      <p>val is: {val}</p>
+      <h3>
+        Drop down value is:<span style={{ color: "red" }}> {val}</span>
+      </h3>
     </>
   );
 }
