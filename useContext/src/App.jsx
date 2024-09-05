@@ -1,16 +1,17 @@
-import "./App.css";
-import { Child1 } from "./Components/child1";
+import React from "react";
+import Child1 from "./Component/Child1";
 
-function App() {
-  let value = 10;
+export const AppContext = React.createContext();
+
+const App = () => {
   return (
     <div>
-      <h1>Grand Parent</h1>
-      <h2>
-        <Child1 value={value} />
-      </h2>
+      <h1>Hi</h1>
+      <AppContext.Provider value={"Good evening"}>
+        <Child1 />
+      </AppContext.Provider>
     </div>
   );
-}
+};
 
 export default App;
