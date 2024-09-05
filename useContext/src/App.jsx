@@ -1,16 +1,15 @@
 import React from "react";
 import Child1 from "./Component/Child1";
 
-export const AppContext = React.createContext();
-
+export const AppContext = React.createContext(1000);
 const App = () => {
   return (
-    <div>
-      <h1>Hi</h1>
-      <AppContext.Provider value={"Good evening"}>
+    <AppContext.Provider value={10}>
+      <div>
+        <h1>Parent</h1>
         <Child1 />
-      </AppContext.Provider>
-    </div>
+      </div>
+     </AppContext.Provider>
   );
 };
 
